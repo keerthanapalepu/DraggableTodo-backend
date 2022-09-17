@@ -9,7 +9,7 @@ const app = express();
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
-const CONNECTION_URL = "mongodb://localhost:27017"
+const CONNECTION_URL = "ongodb+srv://keerthana:keerthana@cluster0.6e3dm.mongodb.net/?retryWrites=true&w=majority"
 const PORT = process.env.PORT || 5000;
 app.get("/", (req, res) => {
     res.send("APP IS RUNNING");

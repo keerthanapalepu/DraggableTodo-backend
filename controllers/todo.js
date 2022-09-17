@@ -36,7 +36,7 @@ export const updateTodo = async(req, res) => {
         const todo = await TodosList.findById(req.params.id);
         if (!todo) return res.status(404).json("No such todo");
         await todo.updateOne({ $set: req.body });
-        res.status(200).json("Sucessfully updated");
+        res.status(200).json(todo);
     } catch (e) {
         console.log(e);
         res.status(500).send(e);
